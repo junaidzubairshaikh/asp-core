@@ -100,7 +100,7 @@ namespace asp.Controllers
                     _context.Update(movie);
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateConcurrencyException ex)
                 {
                     if (!MovieExists(movie.Id))
                     {
