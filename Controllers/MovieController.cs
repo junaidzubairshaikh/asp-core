@@ -21,6 +21,7 @@ namespace asp.Controllers
         // GET: Movie
         public async Task<IActionResult> Index()
         {
+            // this will get all movie data.
             return View(await _context.Movie.ToListAsync());
         }
 
